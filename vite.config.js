@@ -12,7 +12,7 @@ import react from '@vitejs/plugin-react'
  *
  * If you use a custom domain (CNAME)     →  set BASE = '/'
  * ------------------------------------------------------------------------- */
-export const BASE = '/morvaridemsaki/'
+export const BASE = '/portfolio/'
 
 export default defineConfig({
   plugins: [react()],
