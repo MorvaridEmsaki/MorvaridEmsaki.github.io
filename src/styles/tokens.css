@@ -1,0 +1,115 @@
+/* ============================================================================
+ * tokens.css — 🎨 THE COLOUR & TYPE CONTROL PANEL
+ * ----------------------------------------------------------------------------
+ * ✏️  Change the whole look of the site from this file alone.
+ *     Every colour used anywhere in the UI is defined here.
+ *
+ *     Each brand colour has TWO variants:
+ *       --pink        the vivid colour, for fills, borders and big shapes
+ *       --pink-ink    a darkened version, safe for TEXT on white (WCAG AA)
+ *     Keep that pairing if you swap the palette, otherwise text contrast drops.
+ * ========================================================================== */
+
+:root {
+  /* --- Brand palette --------------------------------------------------- */
+  --pink: #ff3d81;
+  --pink-ink: #c2145d; /* AA on white for normal text */
+  --pink-soft: #ffe4ef;
+
+  --green: #00b37e;
+  --green-ink: #067a57; /* AA on white */
+  --green-soft: #dbf7ec;
+
+  --orange: #ff7a1a;
+  --orange-ink: #ad4c00; /* AA on white */
+  --orange-soft: #ffeeda;
+
+  /* --- Neutrals --------------------------------------------------------- */
+  --ink: #14100f; /* headings + body text */
+  --ink-2: #4c4442; /* secondary text — 8.2:1 on white */
+  --ink-3: #6d6462; /* tertiary / captions — 5.2:1 on white */
+  --line: #e9e3e1; /* hairline borders */
+  --line-strong: #d6cecb;
+
+  --bg: #fffdfa; /* page background (warm white) */
+  --surface: #ffffff; /* cards */
+  --surface-2: #fbf7f4; /* subtle inset panels */
+
+  /* --- Gradients --------------------------------------------------------- */
+  --grad-hot: linear-gradient(100deg, var(--pink), var(--orange));
+  --grad-full: linear-gradient(100deg, var(--pink), var(--orange) 52%, var(--green));
+  --grad-cool: linear-gradient(120deg, var(--green), #0ea5e9);
+
+  /* --- Typography -------------------------------------------------------- */
+  /* ✏️ Swap these for any Google Font — remember to update the <link> in index.html */
+  --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid type scale — clamp(min, preferred, max) */
+  --fs-hero: clamp(2.4rem, 1.15rem + 5.1vw, 4.6rem);
+  --fs-h1: clamp(2.25rem, 1.4rem + 3.6vw, 4rem);
+  --fs-h2: clamp(1.75rem, 1.2rem + 2.2vw, 2.9rem);
+  --fs-h3: clamp(1.25rem, 1.05rem + 0.8vw, 1.6rem);
+  --fs-lead: clamp(1.05rem, 0.98rem + 0.45vw, 1.3rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.9rem;
+  --fs-xs: 0.78rem;
+
+  /* --- Spacing ----------------------------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  --section-y: clamp(4rem, 2rem + 7vw, 8rem);
+  --container: 1200px;
+  --container-narrow: 820px;
+  --gutter: clamp(1.1rem, 0.6rem + 2.4vw, 3rem);
+
+  /* --- Shape & depth ------------------------------------------------------ */
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 40px;
+  --r-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 16, 15, 0.05), 0 2px 8px rgba(20, 16, 15, 0.04);
+  --shadow-md: 0 4px 12px rgba(20, 16, 15, 0.06), 0 12px 32px rgba(20, 16, 15, 0.07);
+  --shadow-lg: 0 10px 24px rgba(20, 16, 15, 0.08), 0 28px 64px rgba(20, 16, 15, 0.1);
+  --shadow-pink: 0 12px 32px rgba(255, 61, 129, 0.28);
+
+  /* --- Motion ------------------------------------------------------------- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur: 320ms;
+  --dur-slow: 620ms;
+
+  /* --- Accent helper classes get their colour from these ------------------ */
+  --accent: var(--pink);
+  --accent-ink: var(--pink-ink);
+  --accent-soft: var(--pink-soft);
+}
+
+/* Accent theming — add class="accent-green" (or -orange/-pink) to any wrapper */
+.accent-pink {
+  --accent: var(--pink);
+  --accent-ink: var(--pink-ink);
+  --accent-soft: var(--pink-soft);
+}
+.accent-green {
+  --accent: var(--green);
+  --accent-ink: var(--green-ink);
+  --accent-soft: var(--green-soft);
+}
+.accent-orange {
+  --accent: var(--orange);
+  --accent-ink: var(--orange-ink);
+  --accent-soft: var(--orange-soft);
+}

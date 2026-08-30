@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FF3D81" />
+
+    <!-- ✏️ EDIT: base SEO. Page-level titles/descriptions are set in src/components/Seo.jsx -->
+    <title>Morvarid — Digital Marketing &amp; Social Media Strategist</title>
+    <meta
+      name="description"
+      content="Portfolio of Morvarid, a digital marketing and social media strategist in Ottawa — social strategy, paid media, content and analytics case studies."
+    />
+    <meta name="author" content="Morvarid" />
+    <link rel="canonical" href="https://YOUR-USERNAME.github.io/portfolio/" />
+
+    <!-- Open Graph / social sharing (✏️ EDIT urls after you deploy) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Morvarid — Digital Marketing &amp; Social Media Strategist" />
+    <meta
+      property="og:description"
+      content="Social strategy, paid media, content and analytics case studies."
+    />
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/portfolio/" />
+    <meta property="og:image" content="./og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      SPA fallback decoder — pairs with public/404.html so that refreshing a deep
+      link (e.g. /portfolio/projects/bloom-botanics) does NOT 404 on GitHub Pages.
+      Do not remove.
+    -->
+    <script>
+      (function () {
+        var l = window.location
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      This portfolio needs JavaScript enabled. You can still reach me by email — see the address in
+      the page source or on my LinkedIn profile.
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
