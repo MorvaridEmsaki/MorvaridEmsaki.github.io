@@ -26,7 +26,7 @@ export const site = {
    *   photo: 'images/profile.jpg'
    * Leave it as null to show the generated gradient portrait placeholder.
    * ---------------------------------------------------------------------- */
-  photo: null, // ✏️ e.g. 'images/profile.jpg'
+  photo: profile.jpg, // ✏️ e.g. 'images/profile.jpg'
   photoAlt: 'Morvarid, digital marketing and social media strategist', // ✏️ alt text
 
   /* --- Résumé -------------------------------------------------------------
